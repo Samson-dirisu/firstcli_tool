@@ -25,8 +25,7 @@ Future<void> dcat(List<String> paths, {bool showLineNumbers = false}) async {
           .transform(const LineSplitter());
       try {
         await for (final line in lines) {
-          if (showLineNumbers) {
-            stdout.write('${lineNumber++}');
+          if (showLineNumbers) { stdout.write('${lineNumber++}');
           }
           stdout.writeln(line);
         }
